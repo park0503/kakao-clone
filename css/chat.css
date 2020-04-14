@@ -6,6 +6,7 @@
   width: 100%;
   box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.3),
     0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  z-index: 2;
 }
 
 .chat-body {
@@ -131,6 +132,7 @@
   color: white;
   font-weight: 600;
   display: block;
+  line-height: 1.5;
 }
 
 .incoming-message {
@@ -141,11 +143,23 @@
   align-self: flex-end;
 }
 
+@keyframes spin {
+  form {
+    transform: none;
+  }
+  to {
+    transform: rotateY(1turn);
+  }
+}
+
 .incoming-message img {
   width: 30px;
   height: 30px;
   border-radius: 15px;
   margin-right: 15px;
+  animation: spin 1s linear infinite;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
+    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
 }
 
 .incoming-message .message__author {
@@ -193,4 +207,22 @@
 
 .sent-message {
   animation: sentAnim 0.5s ease-out forwards;
+}
+
+.chat-screen,
+.chats {
+  padding-bottom: 40px;
+}
+
+.chat .badge {
+  color: white;
+  font-size: 14px;
+  background-color: #dc5d46;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-right: 10px;
 }

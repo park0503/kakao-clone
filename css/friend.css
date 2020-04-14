@@ -9,6 +9,7 @@
   height: 50px;
   border-radius: 38%;
   margin-right: 15px;
+  border: 0.5px solid grey;
 }
 
 .friend__avatar.m-avatar {
@@ -68,4 +69,8 @@
   background-color: #f5f5f5;
   padding: 10px 15px;
   border-radius: 5px;
+}
+
+.friends {
+  padding-bottom: 60px;
 }

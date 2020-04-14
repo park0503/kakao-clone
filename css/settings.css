@@ -20,3 +20,12 @@
 .settings .settings__setting:last-child() {
   margin-bottom: 0;
 }
+
+.support {
+  margin-top: 30px;
+}
+
+.settings__list *,
+.support {
+  cursor: pointer;
+}
